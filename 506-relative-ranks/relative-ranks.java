@@ -11,15 +11,15 @@ class Solution {
         Arrays.sort(tmp, (a, b) -> score[b] - score[a]);
         
         for (int rank = 0; rank < n; rank++) {
-            int originalIndex = tmp[rank];
+            int origin = tmp[rank];
             if (rank == 0) {
-                result[originalIndex] = "Gold Medal";
+                result[origin] = "Gold Medal";
             } else if (rank == 1) {
-                result[originalIndex] = "Silver Medal";
+                result[origin] = "Silver Medal";
             } else if (rank == 2) {
-                result[originalIndex] = "Bronze Medal";
+                result[origin] = "Bronze Medal";
             } else {
-                result[originalIndex] = String.valueOf(rank + 1);
+                result[origin] = String.valueOf(rank + 1);
             }
         }
         
